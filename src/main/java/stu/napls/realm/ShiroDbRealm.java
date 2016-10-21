@@ -55,6 +55,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		Set<String> roleNames = new HashSet<String>();
 		Set<String> permissions = new HashSet<String>();
 		String username = (String) getAvailablePrincipal(principals);
+		System.out.println("==================================");
 		System.out.println(username);
 		roleNames.add("admin");// 添加角色。对应到index.jsp
 		roleNames.add("administrator");

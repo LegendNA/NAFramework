@@ -14,14 +14,14 @@ import stu.napls.service.UserService;
 
 @Controller
 public class JSONController {
-	
+
 	@Resource
 	private UserService userService;
-	
+
 	@RequestMapping("/json")
 	@ResponseBody
-	public Map<String, Object> getUserInfo(){
-		List<HashMap<String, Object>> list=this.userService.getUserInfo();
+	public Map<String, Object> getUserInfo() {
+		List<HashMap<String, Object>> list = this.userService.getUserInfo();
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		System.out.println(list.toString());
 		modelMap.put("msg", list);
